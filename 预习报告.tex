@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, hyperref, mathrsfs}
+\title{{\Huge{\textbf{基础物理实验预习报告}}}\\测量介质中的声速}
+\author{赵雅鹏\qquad2100011762\\化学与分子工程学院}
+\date{\today}
+\linespread{1.5}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{example}[theorem]{例}
+\newtheorem{proposition}[theorem]{命题}
+\usepackage[small]{titlesec}
+\usepackage{makecell}
+
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\section{极值法（共振干涉法、驻波法）和相位法（李萨如图形、行波法）测定空气中的声速分别是什么原理？}
+信号发生器可以固定声波的频率，根据$v=\lambda\cdot f$已知频率，则只需要测出波长就可以间接测出声速。\\
+极值法：空气中一沿着x方传播的平面驻波遇到一垂直于x方向的刚性平面，就会发生反射，和入射声波发生干涉而形成驻波。在驻波场中，坐标为$x$,与刚性平面间的距离为$l$的空气质点的位移$\xi$ 可表示为：\\
+\begin{equation}
+\xi = \dfrac{asin[k(l-x)]}{sinkl}cos\omega t\quad(k=\dfrac{2\pi}{\lambda}=\dfrac{\omega}{v})
+\end{equation}
+在驻波场中，空气质点的位移不能直接观察到，故通过空气的声压来反应驻波位移，由声学理论：\\
+\begin{equation}
+p=-\rho_0v^2\dfrac{\partial \xi}{\partial x}
+\end{equation}
+\begin{equation}
+\therefore p=\rho_0 \omega va\dfrac{sin[k(l-x)+\frac{\pi}{2}]}{sin kl}cos\omega t
+\end{equation}
+比较（1）和（3）可知：在声场中，空气质点位移为波腹的地方，声压为波节；而空气质点位移为波节的地方，声压为波腹。在作为反射面的刚性平面处，$x=l$,空气质点的位移恒为0，故这里声压则恒为波腹，将$x=l$代入式（3），得到刚性平面处声压振幅为：
+\begin{equation}
+|p(l)|=\dfrac{\rho_0 \omega va}{|sinkl|}
+\end{equation}
+式（4）表明，当$l$改变时，刚性平面处声压振幅也随之改变，其数值在极大值和极小值之间周期性地变化。当$l$改变半波长的整数倍时，$|p(l)|$又复原，即：
+\begin{equation}
+|p(l\pm\dfrac{\lambda}{2})|=|p(l)|
+\end{equation}
+刚性平面处声压振幅的大小可以通过示波器观测，根据$|p(l)|$随$l$周期性地变化的原理，可以求出半波长，再根据$v=\lambda\cdot f$，由频率已知，即可算出声速。\\
+行波法：通过比较声源处的声压$p(0)$和刚性平面处的声压$p(l)$的相位来测定声速。\\
+设声源发射的平面行波为：
+\begin{equation}
+\xi = acos(\omega t-kx)
+\end{equation}
+由（2）有：
+\begin{equation}
+p(0)=-\rho_0v\omega asin(\omega t)
+\end{equation}
+\begin{equation}
+p(l)=-\rho_0v\omega asin(\omega t-kl)
+\end{equation}
+$p(l)$比$p(0)$落后$kl$个相位，将声源和接收器的电压信号接示波器绘制成李萨如图形，图形在直线和椭圆间变化，由于$kl=2\pi$,故当。$l$的改变量为一个波长时，图形恢复原状，据此可以测出声波波长$\lambda$。
+\section{由信号源直接输入示波器的信号在极值法和相位法中分别有什么作用？}
+极值法：确定信号发生器产生稳定且大小适当、频率为谐振频率$f_0$的声波，从而提高监测的准确度和灵敏度。\\
+相位法:声源和接收器的信号分别作为X和Y绘制成一个李萨如图形。
+\section{如何将换能器调节到工作在共振频率？}
+使两换能器间有适当距离，功率函数发生器有适当输出电压，调节示波器，使荧光屏上出现稳定的、大小适当的正弦波图形。改变信号发生器的频率，并略微改变接收端位置，使正弦波有最大振幅，此时信号的频率即为换能器的谐振频率$f_0$。
+\section{极值法和相位法测量过程中如何避免声速测定仪回程差（如螺距差）的影响？}
+缓慢转动手轮，避免回转；如果确实转过，则需要回转一圈以上（并且小于测量位），再继续重新转动和测量，从而避免回程差带来的误差，提高测量的准确度。
+\section{了解温度计、湿度计和水银气压计的工作原理，分别简述其在测量过程中需要注意的问题。}
+温度计：温度计需要和测量物体充分接触，稳定后再读数，且不能将温度计拿出读数，读书时，实现要与液面中央（凸液面最高处或者凹液面最低处平行读数）。\\
+湿度计：\\
+水银气压计：
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
